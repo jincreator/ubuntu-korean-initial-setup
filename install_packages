@@ -1,7 +1,7 @@
 #!/bin/sh
 
 install_additional_packages() {
-  for S in ppa:jincreator/freetype ppa:boramism/unity-1404
+  for S in ppa:jincreator/freetype ppa:jincreator/unity
   do
     if zenity --question --text "사설 저장소인 $S의 꾸러미가 깔릴 것입니다."
     then
