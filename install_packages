@@ -3,7 +3,10 @@
 install_additional_packages() {
   for S in ppa:jincreator/freetype ppa:boramism/unity-1404
   do
-    add-apt-repository $S
+    if zenity --question --text "사설 저장소인 $S의 꾸러미가 깔릴 것입니다."
+    then
+      add-apt-repository -y $S
+    fi
   done
   apt-get update && apt-get -y upgrade
 }
